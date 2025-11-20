@@ -1,36 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Enterprise LMS + ERP + CRM Platform
 
-## Getting Started
+A comprehensive educational platform serving learners in Sudan and worldwide with adaptive AI-powered education.
 
-First, run the development server:
+## 🌟 Features
+
+### Core Functionality
+- **Learning Management System (LMS)**
+  - Course creation and management
+  - Module and lesson organization
+  - Video content delivery
+  - Assessments and quizzes
+  - Progress tracking
+  - Adaptive learning paths
+
+- **CRM Systems**
+  - Student CRM (including orphans and special needs support)
+  - Donor CRM and donation tracking
+  - Instructor management
+  - Employer portal for job postings
+
+- **AI Orchestration**
+  - AI-powered tutoring with OpenAI integration
+  - Personalized learning recommendations
+  - Adaptive content delivery
+  - Bilingual AI support (English & Arabic)
+
+- **Certificate System**
+  - Secure certificate generation with PDF
+  - QR code verification
+  - Blockchain-ready architecture
+  - Tamper-proof verification hashes
+
+### Special Features
+- **Bilingual Support**: Full RTL support for Arabic
+- **Accessibility**: Special needs accommodation
+- **Offline-First**: PWA capabilities for low-bandwidth areas
+- **Analytics**: Comprehensive admin dashboard
+- **Security**: JWT authentication, activity logging
+
+## 🚀 Tech Stack
+
+- **Frontend**: Next.js 14 (App Router), React 19, TailwindCSS 4
+- **Backend**: Next.js API Routes, Prisma ORM
+- **Database**: PostgreSQL
+- **AI**: OpenAI GPT-4o-mini
+- **Auth**: JWT-based authentication
+- **Charts**: Recharts
+- **PDF**: pdf-lib, QRCode
+
+## 📦 Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your credentials
+
+# Generate Prisma client
+npx prisma generate
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🗄️ Database Schema
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Comprehensive schema including:
+- Users (multi-role: Student, Instructor, Donor, Employer, Admin)
+- Courses, Modules, Lessons, Assessments
+- Enrollments and Progress tracking
+- Certificates with verification
+- Donations and CRM data
+- Activity logs and AI interactions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔌 API Endpoints
 
-## Learn More
+### Authentication
+- `POST /api/auth/register` - User registration
+- `POST /api/auth/login` - User login
 
-To learn more about Next.js, take a look at the following resources:
+### Courses
+- `GET /api/courses` - List courses
+- `POST /api/courses` - Create course (Instructor/Admin)
+- `POST /api/courses/[id]/enroll` - Enroll in course
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### AI
+- `POST /api/ai/tutor` - AI tutoring assistance
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Certificates
+- `POST /api/certificates/generate` - Generate certificate
+- `GET /api/certificates/verify/[hash]` - Verify certificate
 
-## Deploy on Vercel
+### CRM
+- `GET /api/crm/students` - List students (Admin/Instructor)
+- `GET /api/crm/donors` - List donors (Admin)
+- `POST /api/donations` - Process donation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Analytics
+- `GET /api/analytics/dashboard` - Admin dashboard data
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Deployment
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
+
+Quick deploy to Vercel:
+```bash
+vercel deploy --prod
+```
+
+## 🔒 Security Features
+
+- JWT token authentication
+- Password hashing with bcrypt
+- Activity logging
+- Role-based access control (RBAC)
+- API route protection middleware
+- Certificate verification system
+
+## 🌍 Accessibility & Inclusion
+
+- RTL support for Arabic
+- Special needs student tracking
+- Orphan support programs
+- Low-bandwidth optimization
+- Offline-first PWA
+
+## 📈 Future Enhancements
+
+- Blockchain certificate anchoring
+- Advanced anti-cheat mechanisms
+- Real-time collaboration
+- Video conferencing integration
+- Mobile apps (React Native)
+- Advanced ML-based recommendations
+
+## 📄 License
+
+Proprietary - All rights reserved
+
+## 🤝 Support
+
+For support in Sudan and worldwide, contact: support@eduplatform.com
+
+---
+
+Built with ❤️ for learners worldwide
