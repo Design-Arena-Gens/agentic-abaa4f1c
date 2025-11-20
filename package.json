@@ -1,0 +1,49 @@
+{
+  "name": "claude-project-abaa4f1c-3907-4b05-b6da-b6a1a17a2d6b",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "eslint",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.0.0",
+    "@prisma/client": "^7.0.0",
+    "@types/bcrypt": "^6.0.0",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/pg": "^8.15.6",
+    "@types/qrcode": "^1.5.6",
+    "axios": "^1.13.2",
+    "bcrypt": "^6.0.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.2.3",
+    "jsonwebtoken": "^9.0.2",
+    "next": "16.0.3",
+    "next-auth": "^4.24.13",
+    "openai": "^6.9.1",
+    "pdf-lib": "^1.17.1",
+    "pg": "^8.16.3",
+    "prisma": "^7.0.0",
+    "qrcode": "^1.5.4",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "recharts": "^3.4.1",
+    "swr": "^2.3.6",
+    "uuid": "^13.0.0",
+    "zod": "^4.1.12",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
